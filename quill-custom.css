@@ -1,0 +1,103 @@
+/* Custom Quill Styles for Academia Theme */
+.ql-toolbar.ql-snow {
+    border: none !important;
+    border-bottom: 1px solid #e7e5e4 !important;
+    /* stone-200 */
+    padding: 12px 24px !important;
+    font-family: inherit;
+    background-color: #fafaf9;
+    /* stone-50 */
+    border-radius: 4px 4px 0 0;
+}
+
+.ql-container.ql-snow {
+    border: none !important;
+    font-size: 1.1em;
+}
+
+.ql-editor {
+    min-height: 20rem;
+    /* h-80 */
+    padding: 2.5rem !important;
+    /* p-10 */
+    font-family: 'Times New Roman', serif;
+    line-height: 1.7;
+    /* leading-relaxed */
+    color: #292524;
+    /* stone-800 */
+}
+
+.ql-editor.ql-blank::before {
+    font-style: italic;
+    color: #d6d3d1;
+    /* stone-300 */
+    font-family: 'Times New Roman', serif;
+    left: 40px !important;
+    /* Match padding */
+}
+
+/* Toolbar customization */
+.ql-snow .ql-stroke {
+    stroke: #a8a29e !important;
+    /* stone-400 */
+}
+
+.ql-snow .ql-fill {
+    fill: #a8a29e !important;
+}
+
+.ql-snow .ql-picker {
+    color: #a8a29e !important;
+}
+
+.ql-snow .ql-picker-label:hover .ql-stroke,
+.ql-snow .ql-button:hover .ql-stroke {
+    stroke: #44403c !important;
+    /* stone-700 */
+}
+
+.ql-snow .ql-picker-label:hover .ql-fill,
+.ql-snow .ql-button:hover .ql-fill {
+    fill: #44403c !important;
+}
+
+.ql-snow .ql-picker-label:hover {
+    color: #44403c !important;
+}
+
+/* --- Preview Card Specific Fixes --- */
+
+/* Reset margins for paragraphs in the preview to fix spacing/alignment */
+.quote-content p {
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+    /* Ensure clear wrapping */
+    word-break: break-word;
+}
+
+/* Vertical center alignment helper if needed for single lines */
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Font size overrides with tuned line-heights */
+.ql-size-small {
+    font-size: 0.75em;
+    line-height: 1.5;
+    /* Relaxed for small text */
+}
+
+.ql-size-large {
+    font-size: 1.5em;
+    line-height: 1.3;
+    /* Tighter for large headings */
+}
+
+.ql-size-huge {
+    font-size: 2.5em;
+    line-height: 1.1;
+    /* Very tight for huge display text */
+}

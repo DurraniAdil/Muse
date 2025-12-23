@@ -1,0 +1,82 @@
+# Muse - A Digital Atelier for the Modern Poet
+
+## Overview
+Muse is an aesthetic web application designed for the contemplation and creation of digital poetry and quote cards. It serves as a "private library" or "scriptorium" where users can compose text, apply curated historical and artistic themes, and export high-quality images suitable for social media or digital archiving.
+
+## Features
+
+### 1. The Scriptorium (Creation Studio)
+- **Rich Text Editor**: A customized editor leveraging `react-quill-new` capable of bold, italic, and variable font size formatting (Small to Huge).
+- **Smart Formatting**: Automatically handles text scaling and overflow to ensure text fits beautifully within the card.
+- **Folio Preview**: Real-time rendering of the final image as you type and style.
+
+### 2. Curated Collections (Themes)
+- A selection of artistic themes changing the typography, color palette, and background texture of the card.
+- **Themes include**:
+    - **Letter (Dark/Light)**: Classic correspondence aesthetic.
+    - **Old Urdu**: Specialized support for Nastaliq font script.
+    - **Greek/Latin**: Classical academia styles.
+    - **Theological**: Serious, high-contrast aesthetics.
+    - And more (Writeup, General English, etc.).
+
+### 3. The Archive (History)
+- **Local Storage**: All created manuscripts are saved locally to the user's browser "Ledger".
+- **Gallery View**: View past creations in a responsive grid.
+- **Management**: Re-download ` .png` files or delete individual entries.
+
+### 4. Export Capabilities
+- **High-Res Image Export**: Generates 3x/4x resolution PNGs using `html-to-image` for crisp text on any display.
+- **Ledger Export**: Download the entire history of quotes as a JSON file for backup.
+- **Incinerate Archive**: A "danger zone" feature to permanently wipe all local data.
+
+## Technology Stack
+
+- **Core Framework**: React 19 (Functional Components, Hooks)
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS + Custom CSS (for specialized fonts and quill overrides)
+- **Fonts**: Google Fonts (Lora, Cormorant Garamond, Noto Nastaliq Urdu)
+- **Icons**: Lucide React
+- **Libraries**:
+    - `react-quill-new`: Rich Text Editing
+    - `html-to-image`: DOM to Canvas/PNG generation
+
+## Project Structure
+
+/Muse
+├── /components
+│   ├── Layout.tsx       # Main application shell (Header, Mobile Nav)
+│   ├── QuoteCard.tsx    # The core visual component for the quote (Folio design)
+│   └── ErrorBoundary.tsx # Error handling wrapper
+├── /public
+│   └── /media           # Static assets (favicons, logos)
+├── App.tsx              # Main logic, routing (state-based), and view coordination
+├── constants.ts         # Configuration for Collections (Themes) and default data
+├── quill-custom.css     # Overrides for the text editor styling
+├── index.html           # Entry point
+└── package.json         # Dependencies and scripts
+
+## Setup & Installation
+
+1.  **Prerequisites**: Node.js installed.
+2.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+4.  **Build for Production**:
+    ```bash
+    npm run build
+    ```
+
+## Customization
+
+To add new themes, edit `constants.ts`. You can define:
+- `id`: Unique identifier
+- `name`: Display name
+- `primary`: Accent color
+- `text`: Text color
+- `background`: Card background color
+- `fontClass`: Tailwind class for the specific font family
