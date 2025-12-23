@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, onViewChange }) =
       <header className="sticky top-0 z-50 bg-[#FDFBF7]/90 backdrop-blur-sm border-b border-stone-200 px-6 py-4 lg:px-12">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => onViewChange('home')}>
-            <img src="public/media/head.png" alt="Muse Logo" className="w-9 h-9 opacity-80" />
+            <img src="./media/head.png" alt="Muse Logo" className="w-9 h-9 opacity-80" />
             <h1 className="text-2xl font-serif-quote italic font-semibold tracking-wide text-stone-800">Muse</h1>
           </div>
 
